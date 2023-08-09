@@ -73,6 +73,10 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <IncludePath>$(ProjectDir)\external\glfw\include\GLFW;$(ProjectDir)\external\glm;$(ProjectDir)\external\glad\include;$(IncludePath)</IncludePath>
     <LibraryPath>$(ProjectDir)\external\glfw\lib-vc2022;$(LibraryPath)</LibraryPath>
+    <ExcludePath>$(ProjectDir)shaders;$(ExcludePath)</ExcludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ExcludePath>$(ProjectDir)shaders;$(ExcludePath)</ExcludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -109,6 +113,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(ProjectDir)\external\glfw\include;$(ProjectDir)\external\imgui;$(ProjectDir)\external\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -125,6 +130,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>&lt;differe$(ProjectDir)\external\glfw\include;$(ProjectDir)\external\imgui;$(ProjectDir)\external\glad\include;%(AdditionalIncludeDirectories)nt options&gt;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -134,6 +141,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="source\Camera.cpp" />
     <ClCompile Include="external\glad\src\glad.c" />
     <ClCompile Include="external\imgui\imgui.cpp" />
     <ClCompile Include="external\imgui\imgui_demo.cpp" />
@@ -142,9 +150,19 @@
     <ClCompile Include="external\imgui\imgui_impl_opengl3.cpp" />
     <ClCompile Include="external\imgui\imgui_tables.cpp" />
     <ClCompile Include="external\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="source\Mesh.cpp" />
+    <ClCompile Include="source\OBJLoader.cpp" />
+    <ClCompile Include="source\Shader.cpp" />
+    <ClCompile Include="shaders\fragmentShader.glsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="shaders\vertexShader.glsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="source\main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="source\headers\Camera.hpp" />
     <ClInclude Include="external\imgui\imconfig.h" />
     <ClInclude Include="external\imgui\imgui.h" />
     <ClInclude Include="external\imgui\imgui_impl_glfw.h" />
@@ -154,6 +172,9 @@
     <ClInclude Include="external\imgui\imstb_rectpack.h" />
     <ClInclude Include="external\imgui\imstb_textedit.h" />
     <ClInclude Include="external\imgui\imstb_truetype.h" />
+    <ClInclude Include="source\headers\Mesh.hpp" />
+    <ClInclude Include="source\headers\OBJLoader.hpp" />
+    <ClInclude Include="source\headers\Shader.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

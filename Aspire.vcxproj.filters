@@ -27,55 +27,85 @@
     <ClCompile Include="external\glad\src\glad.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="external\imgui\imgui.cpp">
-      <Filter>Source Files\imgui</Filter>
+    <ClCompile Include="shaders\vertexShader.glsl">
+      <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="external\imgui\imgui_demo.cpp">
-      <Filter>Source Files\imgui</Filter>
+    <ClCompile Include="shaders\fragmentShader.glsl">
+      <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="external\imgui\imgui_draw.cpp">
-      <Filter>Source Files\imgui</Filter>
+    <ClCompile Include="source\Shader.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="external\imgui\imgui_impl_glfw.cpp">
-      <Filter>Source Files\imgui</Filter>
-    </ClCompile>
-    <ClCompile Include="external\imgui\imgui_impl_opengl3.cpp">
+    <ClCompile Include="external\imgui\imgui_widgets.cpp">
       <Filter>Source Files\imgui</Filter>
     </ClCompile>
     <ClCompile Include="external\imgui\imgui_tables.cpp">
       <Filter>Source Files\imgui</Filter>
     </ClCompile>
-    <ClCompile Include="external\imgui\imgui_widgets.cpp">
+    <ClCompile Include="external\imgui\imgui_impl_opengl3.cpp">
       <Filter>Source Files\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="external\imgui\imgui_impl_glfw.cpp">
+      <Filter>Source Files\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="external\imgui\imgui_draw.cpp">
+      <Filter>Source Files\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="external\imgui\imgui_demo.cpp">
+      <Filter>Source Files\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="external\imgui\imgui.cpp">
+      <Filter>Source Files\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Camera.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\OBJLoader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Mesh.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="external\imgui\imconfig.h">
-      <Filter>Header Files\imgui</Filter>
+    <ClInclude Include="source\headers\Shader.hpp">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="external\imgui\imgui.h">
-      <Filter>Header Files\imgui</Filter>
-    </ClInclude>
-    <ClInclude Include="external\imgui\imgui_impl_glfw.h">
-      <Filter>Header Files\imgui</Filter>
-    </ClInclude>
-    <ClInclude Include="external\imgui\imgui_impl_opengl3.h">
-      <Filter>Header Files\imgui</Filter>
-    </ClInclude>
-    <ClInclude Include="external\imgui\imgui_impl_opengl3_loader.h">
-      <Filter>Header Files\imgui</Filter>
-    </ClInclude>
-    <ClInclude Include="external\imgui\imgui_internal.h">
-      <Filter>Header Files\imgui</Filter>
-    </ClInclude>
-    <ClInclude Include="external\imgui\imstb_rectpack.h">
+    <ClInclude Include="external\imgui\imstb_truetype.h">
       <Filter>Header Files\imgui</Filter>
     </ClInclude>
     <ClInclude Include="external\imgui\imstb_textedit.h">
       <Filter>Header Files\imgui</Filter>
     </ClInclude>
-    <ClInclude Include="external\imgui\imstb_truetype.h">
+    <ClInclude Include="external\imgui\imstb_rectpack.h">
       <Filter>Header Files\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="external\imgui\imgui_internal.h">
+      <Filter>Header Files\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="external\imgui\imgui_impl_opengl3_loader.h">
+      <Filter>Header Files\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="external\imgui\imgui_impl_opengl3.h">
+      <Filter>Header Files\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="external\imgui\imgui_impl_glfw.h">
+      <Filter>Header Files\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="external\imgui\imgui.h">
+      <Filter>Header Files\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="external\imgui\imconfig.h">
+      <Filter>Header Files\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="source\headers\Camera.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\headers\OBJLoader.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\headers\Mesh.hpp">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
